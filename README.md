@@ -1,7 +1,8 @@
 # AutoCompleteLokasi
 AutoCompleteText untuk Mencari Lokasi berdasarkan keyword Kelurahan/Kecamatan/Kabupaten/Propinsi/Kode Pos
+Sumber berupa file JSON yg disimpan pada folder Asset
 
-sumber berupa file JSON yg disimpan pada folder Asset
+Sebagai contoh file JSON tsb cuma berisi 8997 Desa/Kelurahan di Jateng & DIY
 
 
 <div><img src='https://github.com/exzant/AutoCompleteLokasi/blob/master/AutoCompleteLokasi.gif' width="360px" style='border: #f1f1f1 solid 1px'/></div>
