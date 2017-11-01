@@ -24,7 +24,7 @@ import java.util.ArrayList;
 
 public class AutocompleteAdapter extends ArrayAdapter implements Filterable {
     private ArrayList aLokasi;
-    private String URL_ALAMAT = "http://apiunggun.ga/desa.php?filter=";
+    private String URL = "http://apiunggun.ga/desa.php?filter=";
 
     public AutocompleteAdapter(Context context, int resource) {
         super(context, resource);
@@ -70,7 +70,6 @@ public class AutocompleteAdapter extends ArrayAdapter implements Filterable {
                 }
             }
         };
-
         return myFilter;
     }
 
@@ -96,7 +95,7 @@ public class AutocompleteAdapter extends ArrayAdapter implements Filterable {
         protected ArrayList doInBackground(String... params) {
             try {
                 //Create a new COUNTRY SEARCH url Ex "search.php?term=india"
-                /*String NEW_URL = URL_ALAMAT + URLEncoder.encode(params[0],"UTF-8");
+                /*String NEW_URL = URL + URLEncoder.encode(params[0],"UTF-8");
                 Log.d("HUS", "JSON RESPONSE URL " + NEW_URL);
 
                 URL url = new URL(NEW_URL);

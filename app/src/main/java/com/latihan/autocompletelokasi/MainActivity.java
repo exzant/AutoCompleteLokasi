@@ -15,14 +15,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final AutoCompleteTextView CariLokasi = (AutoCompleteTextView) findViewById(R.id.search);
-        final AutocompleteAdapter adapterAlamat = new AutocompleteAdapter(this,android.R.layout.simple_dropdown_item_1line);
-        CariLokasi.setAdapter(adapterAlamat);
+        final AutocompleteAdapter adapterLokasi = new AutocompleteAdapter(this,android.R.layout.simple_dropdown_item_1line);
+        CariLokasi.setAdapter(adapterLokasi);
 
         //when autocomplete is clicked
         CariLokasi.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String getLokasi = adapterAlamat.getItem(position).getLokasi();
+                String getLokasi = adapterLokasi.getItem(position).getLokasi();
                 CariLokasi.setText(getLokasi);
             }
         });
