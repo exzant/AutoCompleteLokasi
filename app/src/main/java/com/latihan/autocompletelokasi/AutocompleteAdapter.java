@@ -16,6 +16,7 @@ import android.widget.Filterable;
 import android.widget.TextView;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -25,11 +26,14 @@ import java.util.ArrayList;
 public class AutocompleteAdapter extends ArrayAdapter implements Filterable {
     private ArrayList aLokasi;
     private String URL = "http://apiunggun.ga/desa.php?filter=";
+    private JSONObject jsonObject = new JSONObject(loadJSONfromAssets(getContext()));
+    //JSONObject jsonObject = new JSONObject(loadJSONfromAssets(getContext()));
 
-    public AutocompleteAdapter(Context context, int resource) {
+    public AutocompleteAdapter(Context context, int resource) throws JSONException {
         super(context, resource);
         aLokasi = new ArrayList<>();
     }
+
 
     @Override
     public int getCount() {
@@ -115,7 +119,7 @@ public class AutocompleteAdapter extends ArrayAdapter implements Filterable {
                 String jsonString =  sb.toString();
 
                 JSONObject jsonObject = new JSONObject(jsonString);*/
-                JSONObject jsonObject = new JSONObject(loadJSONfromAssets(getContext()));
+                //JSONObject jsonObject = new JSONObject(loadJSONfromAssets(getContext()));
 
                 JSONArray jsonArray = jsonObject.getJSONArray("result");
                 ArrayList lokasiList = new ArrayList<>();
